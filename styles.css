@@ -1,0 +1,893 @@
+/* Estilos personalizados para o portfólio MFM */
+
+/* Configurações globais */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Efeito de Estrelas Animadas */
+#stars-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.stars {
+    background: #000 url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle cx="100" cy="100" r="1" fill="white" opacity="0.8"/><circle cx="300" cy="200" r="0.5" fill="white" opacity="0.6"/><circle cx="500" cy="150" r="1.5" fill="white" opacity="0.9"/><circle cx="700" cy="300" r="0.8" fill="white" opacity="0.7"/><circle cx="900" cy="250" r="1.2" fill="white" opacity="0.8"/><circle cx="200" cy="400" r="0.6" fill="white" opacity="0.5"/><circle cx="400" cy="350" r="1" fill="white" opacity="0.8"/><circle cx="600" cy="450" r="0.7" fill="white" opacity="0.6"/><circle cx="800" cy="500" r="1.3" fill="white" opacity="0.9"/><circle cx="150" cy="600" r="0.9" fill="white" opacity="0.7"/><circle cx="350" cy="550" r="1.1" fill="white" opacity="0.8"/><circle cx="550" cy="650" r="0.5" fill="white" opacity="0.5"/><circle cx="750" cy="700" r="1.4" fill="white" opacity="0.9"/><circle cx="950" cy="750" r="0.8" fill="white" opacity="0.7"/><circle cx="250" cy="800" r="1" fill="white" opacity="0.8"/><circle cx="450" cy="850" r="0.6" fill="white" opacity="0.6"/><circle cx="650" cy="900" r="1.2" fill="white" opacity="0.8"/><circle cx="850" cy="950" r="0.7" fill="white" opacity="0.7"/><circle cx="50" cy="50" r="1.5" fill="white" opacity="0.9"/><circle cx="950" cy="50" r="0.8" fill="white" opacity="0.7"/><circle cx="50" cy="950" r="1.1" fill="white" opacity="0.8"/><circle cx="950" cy="950" r="0.9" fill="white" opacity="0.7"/></svg>') repeat top center;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: move-stars 200s linear infinite;
+}
+
+.twinkling {
+    background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle cx="100" cy="100" r="2" fill="white" opacity="0.3"/><circle cx="300" cy="200" r="1.5" fill="white" opacity="0.2"/><circle cx="500" cy="150" r="2.5" fill="white" opacity="0.4"/><circle cx="700" cy="300" r="1.8" fill="white" opacity="0.3"/><circle cx="900" cy="250" r="2.2" fill="white" opacity="0.4"/><circle cx="200" cy="400" r="1.6" fill="white" opacity="0.2"/><circle cx="400" cy="350" r="2" fill="white" opacity="0.3"/><circle cx="600" cy="450" r="1.7" fill="white" opacity="0.3"/><circle cx="800" cy="500" r="2.3" fill="white" opacity="0.4"/><circle cx="150" cy="600" r="1.9" fill="white" opacity="0.3"/><circle cx="350" cy="550" r="2.1" fill="white" opacity="0.4"/><circle cx="550" cy="650" r="1.5" fill="white" opacity="0.2"/><circle cx="750" cy="700" r="2.4" fill="white" opacity="0.4"/><circle cx="950" cy="750" r="1.8" fill="white" opacity="0.3"/><circle cx="250" cy="800" r="2" fill="white" opacity="0.3"/><circle cx="450" cy="850" r="1.6" fill="white" opacity="0.2"/><circle cx="650" cy="900" r="2.2" fill="white" opacity="0.4"/><circle cx="850" cy="950" r="1.7" fill="white" opacity="0.3"/><circle cx="50" cy="50" r="2.5" fill="white" opacity="0.4"/><circle cx="950" cy="50" r="1.8" fill="white" opacity="0.3"/><circle cx="50" cy="950" r="2.1" fill="white" opacity="0.4"/><circle cx="950" cy="950" r="1.9" fill="white" opacity="0.3"/></svg>') repeat top center;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: twinkle 4s ease-in-out infinite alternate;
+}
+
+.clouds {
+    background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle cx="200" cy="100" r="30" fill="rgba(255,255,255,0.02)"/><circle cx="250" cy="100" r="25" fill="rgba(255,255,255,0.02)"/><circle cx="300" cy="100" r="35" fill="rgba(255,255,255,0.02)"/><circle cx="700" cy="200" r="20" fill="rgba(255,255,255,0.02)"/><circle cx="750" cy="200" r="15" fill="rgba(255,255,255,0.02)"/><circle cx="800" cy="200" r="25" fill="rgba(255,255,255,0.02)"/><circle cx="400" cy="300" r="40" fill="rgba(255,255,255,0.02)"/><circle cx="450" cy="300" r="30" fill="rgba(255,255,255,0.02)"/><circle cx="500" cy="300" r="35" fill="rgba(255,255,255,0.02)"/><circle cx="900" cy="400" r="25" fill="rgba(255,255,255,0.02)"/><circle cx="950" cy="400" r="20" fill="rgba(255,255,255,0.02)"/><circle cx="1000" cy="400" r="30" fill="rgba(255,255,255,0.02)"/></svg>') repeat top center;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: move-clouds 150s linear infinite;
+}
+
+@keyframes move-stars {
+    from {background-position: 0 0;}
+    to {background-position: -10000px 5000px;}
+}
+
+@keyframes twinkle {
+    from {opacity: 0.3;}
+    to {opacity: 1;}
+}
+
+@keyframes move-clouds {
+    from {background-position: 0 0;}
+    to {background-position: 10000px 0;}
+}
+
+/* Estrelas individuais animadas */
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    animation: star-twinkle 3s ease-in-out infinite;
+}
+
+.star:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+.star:nth-child(2) { top: 20%; left: 80%; animation-delay: 0.5s; }
+.star:nth-child(3) { top: 30%; left: 20%; animation-delay: 1s; }
+.star:nth-child(4) { top: 40%; left: 90%; animation-delay: 1.5s; }
+.star:nth-child(5) { top: 50%; left: 30%; animation-delay: 2s; }
+.star:nth-child(6) { top: 60%; left: 70%; animation-delay: 2.5s; }
+.star:nth-child(7) { top: 70%; left: 15%; animation-delay: 3s; }
+.star:nth-child(8) { top: 80%; left: 85%; animation-delay: 3.5s; }
+.star:nth-child(9) { top: 90%; left: 25%; animation-delay: 4s; }
+.star:nth-child(10) { top: 15%; left: 60%; animation-delay: 4.5s; }
+
+@keyframes star-twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.5); }
+}
+
+/* Estrelas dinâmicas criadas via JavaScript */
+.dynamic-star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: dynamic-star-float 8s ease-in-out infinite;
+}
+
+.twinkle-star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle-star-animation 4s ease-in-out infinite;
+}
+
+.shooting-star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: linear-gradient(90deg, white, transparent);
+    border-radius: 50%;
+    animation: shooting-star-animation 2s linear forwards;
+}
+
+@keyframes dynamic-star-float {
+    0%, 100% { 
+        opacity: 0.3; 
+        transform: translateY(0px) scale(1); 
+    }
+    50% { 
+        opacity: 0.8; 
+        transform: translateY(-10px) scale(1.2); 
+    }
+}
+
+@keyframes twinkle-star-animation {
+    0%, 100% { 
+        opacity: 0.2; 
+        transform: scale(1); 
+    }
+    25% { 
+        opacity: 0.8; 
+        transform: scale(1.3); 
+    }
+    50% { 
+        opacity: 0.4; 
+        transform: scale(0.8); 
+    }
+    75% { 
+        opacity: 1; 
+        transform: scale(1.5); 
+    }
+}
+
+@keyframes shooting-star-animation {
+    0% {
+        opacity: 1;
+        transform: translateX(0) translateY(0) rotate(45deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(200px) translateY(200px) rotate(45deg);
+    }
+}
+
+/* Efeito de Estrelas no Footer */
+#footer-stars-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.footer-stars {
+    background: #000 url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle cx="100" cy="100" r="0.8" fill="white" opacity="0.6"/><circle cx="300" cy="200" r="0.4" fill="white" opacity="0.4"/><circle cx="500" cy="150" r="1.2" fill="white" opacity="0.7"/><circle cx="700" cy="300" r="0.6" fill="white" opacity="0.5"/><circle cx="900" cy="250" r="1" fill="white" opacity="0.6"/><circle cx="200" cy="400" r="0.5" fill="white" opacity="0.3"/><circle cx="400" cy="350" r="0.8" fill="white" opacity="0.6"/><circle cx="600" cy="450" r="0.6" fill="white" opacity="0.4"/><circle cx="800" cy="500" r="1.1" fill="white" opacity="0.7"/><circle cx="150" cy="600" r="0.7" fill="white" opacity="0.5"/><circle cx="350" cy="550" r="0.9" fill="white" opacity="0.6"/><circle cx="550" cy="650" r="0.4" fill="white" opacity="0.3"/><circle cx="750" cy="700" r="1.3" fill="white" opacity="0.7"/><circle cx="950" cy="750" r="0.7" fill="white" opacity="0.5"/><circle cx="250" cy="800" r="0.8" fill="white" opacity="0.6"/><circle cx="450" cy="850" r="0.5" fill="white" opacity="0.4"/><circle cx="650" cy="900" r="1" fill="white" opacity="0.6"/><circle cx="850" cy="950" r="0.6" fill="white" opacity="0.5"/><circle cx="50" cy="50" r="1.2" fill="white" opacity="0.7"/><circle cx="950" cy="50" r="0.7" fill="white" opacity="0.5"/><circle cx="50" cy="950" r="0.9" fill="white" opacity="0.6"/><circle cx="950" cy="950" r="0.8" fill="white" opacity="0.5"/></svg>') repeat top center;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: footer-move-stars 150s linear infinite;
+}
+
+.footer-twinkling {
+    background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle cx="100" cy="100" r="1.5" fill="white" opacity="0.2"/><circle cx="300" cy="200" r="1.2" fill="white" opacity="0.15"/><circle cx="500" cy="150" r="2" fill="white" opacity="0.3"/><circle cx="700" cy="300" r="1.4" fill="white" opacity="0.2"/><circle cx="900" cy="250" r="1.8" fill="white" opacity="0.25"/><circle cx="200" cy="400" r="1.3" fill="white" opacity="0.15"/><circle cx="400" cy="350" r="1.6" fill="white" opacity="0.2"/><circle cx="600" cy="450" r="1.4" fill="white" opacity="0.2"/><circle cx="800" cy="500" r="1.9" fill="white" opacity="0.3"/><circle cx="150" cy="600" r="1.5" fill="white" opacity="0.2"/><circle cx="350" cy="550" r="1.7" fill="white" opacity="0.25"/><circle cx="550" cy="650" r="1.2" fill="white" opacity="0.15"/><circle cx="750" cy="700" r="2.1" fill="white" opacity="0.3"/><circle cx="950" cy="750" r="1.5" fill="white" opacity="0.2"/><circle cx="250" cy="800" r="1.6" fill="white" opacity="0.2"/><circle cx="450" cy="850" r="1.3" fill="white" opacity="0.15"/><circle cx="650" cy="900" r="1.8" fill="white" opacity="0.25"/><circle cx="850" cy="950" r="1.4" fill="white" opacity="0.2"/><circle cx="50" cy="50" r="2" fill="white" opacity="0.3"/><circle cx="950" cy="50" r="1.5" fill="white" opacity="0.2"/><circle cx="50" cy="950" r="1.7" fill="white" opacity="0.25"/><circle cx="950" cy="950" r="1.6" fill="white" opacity="0.2"/></svg>') repeat top center;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: footer-twinkle 6s ease-in-out infinite alternate;
+}
+
+.footer-clouds {
+    background: transparent url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle cx="200" cy="100" r="25" fill="rgba(255,255,255,0.015)"/><circle cx="250" cy="100" r="20" fill="rgba(255,255,255,0.015)"/><circle cx="300" cy="100" r="30" fill="rgba(255,255,255,0.015)"/><circle cx="700" cy="200" r="15" fill="rgba(255,255,255,0.015)"/><circle cx="750" cy="200" r="12" fill="rgba(255,255,255,0.015)"/><circle cx="800" cy="200" r="20" fill="rgba(255,255,255,0.015)"/><circle cx="400" cy="300" r="35" fill="rgba(255,255,255,0.015)"/><circle cx="450" cy="300" r="25" fill="rgba(255,255,255,0.015)"/><circle cx="500" cy="300" r="30" fill="rgba(255,255,255,0.015)"/><circle cx="900" cy="400" r="20" fill="rgba(255,255,255,0.015)"/><circle cx="950" cy="400" r="15" fill="rgba(255,255,255,0.015)"/><circle cx="1000" cy="400" r="25" fill="rgba(255,255,255,0.015)"/></svg>') repeat top center;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    animation: footer-move-clouds 120s linear infinite;
+}
+
+@keyframes footer-move-stars {
+    from {background-position: 0 0;}
+    to {background-position: -8000px 3000px;}
+}
+
+@keyframes footer-twinkle {
+    from {opacity: 0.2;}
+    to {opacity: 0.8;}
+}
+
+@keyframes footer-move-clouds {
+    from {background-position: 0 0;}
+    to {background-position: 8000px 0;}
+}
+
+/* Estrelas dinâmicas do footer */
+.footer-dynamic-star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: footer-dynamic-star-float 10s ease-in-out infinite;
+}
+
+@keyframes footer-dynamic-star-float {
+    0%, 100% { 
+        opacity: 0.2; 
+        transform: translateY(0px) scale(1); 
+    }
+    50% { 
+        opacity: 0.6; 
+        transform: translateY(-8px) scale(1.1); 
+    }
+}
+
+/* Menu de Navegação */
+#navbar {
+    background: transparent;
+    backdrop-filter: none;
+    border-bottom: none;
+}
+
+#navbar.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+#navbar.scrolled .nav-link {
+    color: #000000;
+}
+
+#navbar.scrolled .nav-link:hover {
+    color: #000000;
+}
+
+#navbar.scrolled #mobile-menu-btn:hover {
+    color: #000000;
+}
+
+#navbar.scrolled a[href="#hero"] {
+    color: #000000;
+}
+
+#navbar.scrolled a[href="#hero"]:hover {
+    color: #000000;
+}
+
+/* Links de navegação */
+.nav-link {
+    color: white;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 0.25rem 0;
+    font-size: 0.9rem;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #000000;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link:hover {
+    color: #000000;
+    transform: translateY(-1px);
+}
+
+/* Animações de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Classes de animação */
+.animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-fade-in-delay {
+    animation: fadeIn 1s ease-out 0.3s forwards;
+    opacity: 0;
+}
+
+.animate-fade-in-delay-2 {
+    animation: fadeIn 1s ease-out 0.6s forwards;
+    opacity: 0;
+}
+
+.animate-fade-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-slide-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-right {
+    animation: slideInRight 0.8s ease-out forwards;
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.6s ease-out forwards;
+}
+
+/* Hero Section */
+#hero {
+    background: #000000;
+    position: relative;
+    overflow: hidden;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    opacity: 0.3;
+}
+
+/* Botão CTA */
+#cta-btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+#cta-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+#cta-btn:hover::before {
+    left: 100%;
+}
+
+/* Cards da equipe */
+.team-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.team-card.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.team-card:nth-child(1) { transition-delay: 0.1s; }
+.team-card:nth-child(2) { transition-delay: 0.2s; }
+.team-card:nth-child(3) { transition-delay: 0.3s; }
+
+/* Botões de navegação do carrossel */
+.nav-btn {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.nav-btn:hover {
+    border-color: #000000;
+    background: #000000;
+    color: white;
+}
+
+.nav-btn:active {
+    transform: scale(0.95);
+}
+
+/* Indicadores do carrossel */
+.indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #d1d5db;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.indicator:hover {
+    background: #9ca3af;
+    transform: scale(1.2);
+}
+
+.indicator.active {
+    background: #000000;
+    transform: scale(1.3);
+}
+
+/* Animações do carrossel */
+.team-card.fade-out {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+.team-card.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animações de transição entre cards */
+.team-card.slide-out-left {
+    animation: slideOutLeft 0.4s ease-in-out forwards;
+}
+
+.team-card.slide-out-right {
+    animation: slideOutRight 0.4s ease-in-out forwards;
+}
+
+.team-card.slide-in-left {
+    animation: slideInLeft 0.4s ease-in-out forwards;
+}
+
+.team-card.slide-in-right {
+    animation: slideInRight 0.4s ease-in-out forwards;
+}
+
+@keyframes slideOutLeft {
+    0% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(-100px) scale(0.9);
+    }
+}
+
+@keyframes slideOutRight {
+    0% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100px) scale(0.9);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px) scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+/* Efeito de brilho nos botões durante transição */
+.nav-btn.transitioning {
+    pointer-events: none;
+    opacity: 0.7;
+    transform: scale(0.95);
+}
+
+/* Indicadores com animação durante transição */
+.indicator.transitioning {
+    opacity: 0.5;
+    transform: scale(0.8);
+}
+
+/* Cards de projeto */
+.project-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.project-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card:nth-child(1) { transition-delay: 0.1s; }
+.project-card:nth-child(2) { transition-delay: 0.2s; }
+.project-card:nth-child(3) { transition-delay: 0.3s; }
+.project-card:nth-child(4) { transition-delay: 0.4s; }
+
+/* Hover effects para projetos */
+.project-card .group:hover img {
+    transform: scale(1.05);
+}
+
+/* Skills */
+.skill-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+}
+
+.skill-item.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-item:nth-child(1) { transition-delay: 0.1s; }
+.skill-item:nth-child(2) { transition-delay: 0.2s; }
+.skill-item:nth-child(3) { transition-delay: 0.3s; }
+.skill-item:nth-child(4) { transition-delay: 0.4s; }
+.skill-item:nth-child(5) { transition-delay: 0.5s; }
+.skill-item:nth-child(6) { transition-delay: 0.6s; }
+.skill-item:nth-child(7) { transition-delay: 0.7s; }
+.skill-item:nth-child(8) { transition-delay: 0.8s; }
+
+/* Formulário */
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #000000;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Links sociais */
+.social-link {
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-3px) scale(1.1);
+}
+
+/* Scroll reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 4rem;
+    }
+    
+    #hero p {
+        font-size: 1.1rem;
+    }
+    
+    .team-card, .project-card, .skill-item {
+        transition-delay: 0s !important;
+    }
+    
+    /* Ajustar padding do hero para o menu mobile */
+    #hero {
+        padding-top: 60px;
+    }
+}
+
+/* Responsividade para o carrossel */
+@media (max-width: 768px) {
+    .nav-btn {
+        padding: 0.75rem;
+    }
+    
+    .indicator {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* Efeitos de partículas no hero (opcional) */
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+        opacity: 0.5;
+    }
+}
+
+/* Gradientes personalizados */
+.gradient-text {
+    background: #000000;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Efeitos de glassmorphism */
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Animações de loading */
+.loading {
+    opacity: 0;
+    animation: loading 1s ease-out forwards;
+}
+
+@keyframes loading {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Efeitos de hover para botões */
+.btn-hover {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-hover:hover::after {
+    left: 100%;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #000000;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #333333;
+}
+
+/* Seleção de texto personalizada */
+::selection {
+    background: rgba(0, 0, 0, 0.3);
+    color: #000000;
+}
+
+/* Foco para acessibilidade */
+*:focus {
+    outline: 2px solid #000000;
+    color: #000000;
+}
+
+/* Estados de hover para elementos interativos */
+.interactive {
+    transition: all 0.2s ease;
+}
+
+.interactive:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Animações de entrada para seções */
+.section-enter {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.section-enter.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Efeitos de parallax sutil */
+.parallax {
+    transform: translateZ(0);
+    will-change: transform;
+}
+
+/* Animações de texto */
+.text-reveal {
+    overflow: hidden;
+}
+
+.text-reveal span {
+    display: inline-block;
+    transform: translateY(100%);
+    transition: transform 0.6s ease;
+}
+
+.text-reveal.revealed span {
+    transform: translateY(0);
+}
+
+/* Efeitos de hover para cards */
+.card-hover {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Gradientes animados */
+.gradient-animate {
+    background: #000000;
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Ajustes para cards mais verticais */
+.team-card .bg-white {
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Estilos para avatares com fotos */
+#person-image {
+    transition: all 0.3s ease;
+}
+
+#person-image:hover {
+    transform: scale(1.05);
+}
+
+#person-initial {
+    transition: all 0.3s ease;
+}
+
+/* Transição suave entre foto e letra */
+#person-avatar img,
+#person-avatar span {
+    transition: opacity 0.3s ease;
+}
+
+/* Efeito de loading para imagens */
+.avatar-loading {
+    opacity: 0.7;
+    filter: blur(1px);
+}
+

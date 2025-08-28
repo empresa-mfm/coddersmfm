@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MFM - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+</head>
+    <body class="font-['Poppins'] bg-white text-black">
+    <!-- Menu de Navegação -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 lg:px-8">
+            <div class="flex items-center justify-between py-2">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <a href="#hero" class="text-xl md:text-2xl font-bold text-white hover:text-black transition-colors duration-300">
+                        MFM
+                    </a>
+                </div>
+                
+                <!-- Menu Desktop -->
+                <div class="hidden md:flex items-center space-x-4 lg:space-x-6">
+                    <a href="#sobre" class="nav-link">Sobre</a>
+                    <a href="#projetos" class="nav-link">Projetos</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#contato" class="nav-link">Contato</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16 md:pt-20">
+        <div class="absolute inset-0 bg-black opacity-90"></div>
+        <div class="absolute inset-0 bg-black opacity-20"></div>
+        
+        <!-- Estrelas animadas -->
+        <div id="stars-container" class="absolute inset-0 overflow-hidden">
+            <div class="stars"></div>
+            <div class="twinkling"></div>
+            <div class="clouds"></div>
+            <!-- Estrelas individuais -->
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+        </div>
+        
+        <div class="relative z-10 text-center text-white px-4 md:px-8">
+            <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 md:mb-6 lg:mb-8 tracking-wider animate-fade-in">
+                MFM
+            </h1>
+            <p class="text-lg sm:text-xl md:text-2xl mb-6 md:mb-8 max-w-2xl md:max-w-3xl lg:max-w-4xl mx-auto leading-relaxed animate-fade-in-delay">
+                Três talentos, uma visão. Design. Código. Inovação.
+            </p>
+            <button id="cta-btn" class="bg-white text-black px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold text-base md:text-lg hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 animate-fade-in-delay-2">
+                Conheça nosso trabalho
+            </button>
+        </div>
+        
+        <div class="absolute bottom-6 md:bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-white text-xl md:text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Sobre Nós -->
+    <section id="sobre" class="py-16 md:py-20 lg:py-24 bg-white">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="text-center mb-12 md:mb-16 lg:mb-20">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-black">Sobre Nós</h2>
+                <p class="text-lg md:text-xl lg:text-2xl text-black max-w-3xl lg:max-w-4xl mx-auto leading-relaxed">
+                    Somos um grupo apaixonado por criar experiências digitais únicas e inovadoras. 
+                    Combinamos criatividade, tecnologia e visão estratégica para transformar ideias em realidade.
+                </p>
+            </div>
+            
+            <!-- Carrossel de Pessoas -->
+            <div class="max-w-2xl lg:max-w-3xl xl:max-w-4xl mx-auto relative">
+                <!-- Card Ativo -->
+                <div id="active-card" class="team-card active">
+                    <div class="bg-white rounded-2xl p-6 md:p-8 lg:p-10 text-center shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div id="person-avatar" class="w-24 h-24 sm:w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 mx-auto mb-6 md:mb-8 rounded-full bg-black flex items-center justify-center text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold overflow-hidden">
+                            <img id="person-image" src="img/marco.jpeg" alt="" class="">
+                        </div>
+                        <h3 id="person-name" class="text-xl sm:text-2xl md:text-3xl font-bold mb-2 md:mb-3 text-black">Marco Capano</h3>
+                        <p id="person-role" class="text-black font-semibold mb-3 md:mb-4 text-base md:text-lg">Desenvolvedor Full-Stack</p>
+                        <p id="person-bio" class="text-black leading-relaxed text-sm md:text-base max-w-sm mx-auto">Desenvolvedor apaixonado por criar aplicações robustas e escaláveis, transformando ideias em código funcional e elegante.</p>
+                    </div>
+                </div>
+                
+                <!-- Navegação -->
+                <div class="flex justify-center items-center mt-6 md:mt-8 space-x-3 md:space-x-4">
+                    <!-- Botão Anterior -->
+                    <button id="prev-btn" class="nav-btn bg-white text-black p-2 md:p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110">
+                        <i class="fas fa-chevron-left text-base md:text-lg"></i>
+                    </button>
+                    
+                    <!-- Indicadores -->
+                    <div class="flex space-x-2 md:space-x-3">
+                        <button class="indicator active" data-index="0"></button>
+                        <button class="indicator" data-index="1"></button>
+                        <button class="indicator" data-index="2"></button>
+                    </div>
+                    
+                    <!-- Botão Próximo -->
+                    <button id="next-btn" class="nav-btn bg-white text-black p-2 md:p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110">
+                        <i class="fas fa-chevron-right text-base md:text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projetos" class="py-16 md:py-20 lg:py-24 bg-white">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="text-center mb-12 md:mb-16 lg:mb-20">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-black">Oque fazemos?</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 lg:gap-10 max-w-6xl mx-auto">
+                <div class="project-card">
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+                        <div class="w-full h-48 sm:h-56 md:h-64 bg-black flex items-center justify-center">
+                            <i class="fas fa-mobile-alt text-white text-4xl sm:text-5xl md:text-6xl"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-center text-white p-4 md:p-6">
+                                <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-2">App Mobile</h3>
+                                <p class="text-sm md:text-base lg:text-lg">Aplicativo mobile inovador com design responsivo e UX excepcional</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+                        <div class="w-full h-48 sm:h-56 md:h-64 bg-black flex items-center justify-center">
+                            <i class="fas fa-globe text-white text-4xl sm:text-5xl md:text-6xl"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-center text-white p-4 md:p-6">
+                                <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-2">Website Corporativo</h3>
+                                <p class="text-sm md:text-base lg:text-lg">Site moderno e profissional com foco em conversão e engajamento</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+                        <div class="w-full h-48 sm:h-56 md:h-64 bg-black flex items-center justify-center">
+                            <i class="fas fa-shopping-cart text-white text-4xl sm:text-5xl md:text-6xl"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-center text-white p-4 md:p-6">
+                                <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-2">E-commerce</h3>
+                                <p class="text-sm md:text-base lg:text-lg">Plataforma de vendas online com design intuitivo e funcionalidades avançadas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="relative overflow-hidden rounded-2xl shadow-lg group">
+                        <div class="w-full h-48 sm:h-56 md:h-64 bg-black flex items-center justify-center">
+                            <i class="fas fa-chart-line text-white text-4xl sm:text-5xl md:text-6xl"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-80 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
+                            <div class="text-center text-white p-4 md:p-6">
+                                <h3 class="text-lg sm:text-xl md:text-2xl font-bold mb-2">Dashboard Analytics</h3>
+                                <p class="text-sm md:text-base lg:text-lg">Painel de controle com visualizações de dados interativas e insights valiosos</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-16 md:py-20 lg:py-24 bg-white">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="text-center mb-12 md:mb-16 lg:mb-20">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-black">Nossas Tecnologias</h2>
+                <p class="text-lg md:text-xl lg:text-2xl text-black max-w-3xl lg:max-w-4xl mx-auto">
+                    Domínios as ferramentas mais modernas do mercado
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6 lg:gap-8 max-w-4xl lg:max-w-5xl mx-auto">
+                <div class="skill-item">
+                    <div class="bg-white rounded-xl p-4 md:p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105">
+                        <i class="fab fa-html5 text-4xl sm:text-5xl md:text-6xl text-black mb-3 md:mb-4"></i>
+                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-black">HTML5</h3>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="bg-white rounded-xl p-4 md:p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105">
+                        <i class="fab fa-css3-alt text-4xl sm:text-5xl md:text-6xl text-black mb-3 md:mb-4"></i>
+                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-black">CSS3</h3>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="bg-white rounded-xl p-4 md:p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105">
+                        <i class="fab fa-js text-4xl sm:text-5xl md:text-6xl text-black mb-3 md:mb-4"></i>
+                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-black">JavaScript</h3>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="bg-white rounded-xl p-4 md:p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105">
+                        <i class="fab fa-react text-4xl sm:text-5xl md:text-6xl text-black mb-3 md:mb-4"></i>
+                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-black">React</h3>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="bg-white rounded-xl p-4 md:p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105">
+                        <i class="fab fa-node-js text-4xl sm:text-5xl md:text-6xl text-black mb-3 md:mb-4"></i>
+                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-black">Node.js</h3>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="bg-white rounded-xl p-4 md:p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105">
+                        <i class="fab fa-python text-4xl sm:text-5xl md:text-6xl text-black mb-3 md:mb-4"></i>
+                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-black">Python</h3>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="bg-white rounded-xl p-4 md:p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105">
+                        <i class="fab fa-figma text-4xl sm:text-5xl md:text-6xl text-black mb-3 md:mb-4"></i>
+                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-black">Figma</h3>
+                    </div>
+                </div>
+
+                <div class="skill-item">
+                    <div class="bg-white rounded-xl p-4 md:p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105">
+                        <i class="fab fa-git-alt text-4xl sm:text-5xl md:text-6xl text-black mb-3 md:mb-4"></i>
+                        <h3 class="text-sm md:text-base lg:text-lg font-semibold text-black">Git</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="py-16 md:py-20 lg:py-24 bg-white">
+        <div class="container mx-auto px-4 md:px-6 lg:px-8">
+            <div class="text-center mb-12 md:mb-16 lg:mb-20">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-black">Entre em Contato</h2>
+                <p class="text-lg md:text-xl lg:text-2xl text-black max-w-3xl lg:max-w-4xl mx-auto">
+                    Vamos conversar sobre seu próximo projeto
+                </p>
+            </div>
+            
+            <div class="max-w-4xl lg:max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
+                    <!-- Formulário -->
+                    <div>
+                        <form class="space-y-4 md:space-y-6">
+                            <div>
+                                <label for="nome" class="block text-sm md:text-base font-medium text-black mb-2">Nome</label>
+                                <input type="text" id="nome" name="nome" required 
+                                       class="w-full px-3 md:px-4 py-2 md:py-3 border border-black rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-300">
+                            </div>
+                            
+                            <div>
+                                <label for="email" class="block text-sm md:text-base font-medium text-black mb-2">Email</label>
+                                <input type="email" id="email" name="email" required 
+                                       class="w-full px-3 md:px-4 py-2 md:py-3 border border-black rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-300">
+                            </div>
+                            
+                            <div>
+                                <label for="mensagem" class="block text-sm md:text-base font-medium text-black mb-2">Mensagem</label>
+                                <textarea id="mensagem" name="mensagem" rows="4 md:rows-5" required 
+                                          class="w-full px-3 md:px-4 py-2 md:py-3 border border-black rounded-lg focus:ring-2 focus:ring-black focus:border-transparent transition-all duration-300"></textarea>
+                            </div>
+                            
+                            <button type="submit" 
+                                    class="w-full bg-black text-white py-2 md:py-3 px-4 md:px-6 rounded-lg font-semibold hover:bg-gray-900 transition-all duration-300 transform hover:scale-105">
+                                Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <!-- Informações de Contato -->
+                    <div class="space-y-6 md:space-y-8">
+                        <div>
+                            <h3 class="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-black">Vamos Conversar</h3>
+                            <p class="text-sm md:text-base lg:text-lg text-black leading-relaxed">
+                                Estamos sempre abertos a novos desafios e projetos interessantes. 
+                                Entre em contato conosco e vamos criar algo incrível juntos!
+                            </p>
+                        </div>
+                        
+                        <div class="space-y-3 md:space-y-4">
+                            <h4 class="text-base md:text-lg font-semibold text-black">Redes Sociais</h4>
+                            <div class="flex space-x-3 md:space-x-4">
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-github text-xl md:text-2xl text-black hover:text-gray-800 transition-colors duration-300"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-instagram text-xl md:text-2xl text-black hover:text-gray-800 transition-colors duration-300"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-8 md:py-12 relative overflow-hidden">
+        <!-- Estrelas animadas no footer -->
+        <div id="footer-stars-container" class="absolute inset-0 overflow-hidden">
+            <div class="footer-stars"></div>
+            <div class="footer-twinkling"></div>
+            <div class="footer-clouds"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 md:px-6 lg:px-8 text-center relative z-10">
+            <div class="mb-6 md:mb-8">
+                <h3 class="text-2xl md:text-3xl font-bold mb-3 md:mb-4">MFM</h3>
+                <p class="text-sm md:text-base text-white max-w-md mx-auto">
+                    Três talentos, uma visão. Transformando ideias em experiências digitais extraordinárias.
+                </p>
+            </div>
+            
+            <div class="flex justify-center space-x-4 md:space-x-6 mb-6 md:mb-8">
+                <a href="#" class="text-white hover:text-gray-100 transition-colors duration-300">
+                    <i class="fab fa-instagram text-lg md:text-xl"></i>
+                </a>
+            </div>
+            
+            <div class="border-t border-white pt-6 md:pt-8">
+                <p class="text-sm md:text-base text-white">&copy; MFM — 2025. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
