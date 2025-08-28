@@ -647,7 +647,12 @@ function initTeamCarousel() {
             bio: 'Desenvolvedor apaixonado por criar aplicações robustas e escaláveis, transformando ideias em código funcional e elegante.',
             avatar: 'M',
             gradient: 'from-purple-400 to-blue-500',
-            image: './img/marco.jpeg' // Foto do Marco
+            image: './img/marco.jpeg',
+            social: {
+                linkedin: 'https://www.linkedin.com/in/marco-capano-47a35a37b/',
+                github: 'https://github.com/so1er1',
+                instagram: 'https://www.instagram.com/marcocapanodev/'
+            }
         },
         {
             name: 'Fellipe Farias',
@@ -655,7 +660,12 @@ function initTeamCarousel() {
             bio: 'Desenvolvedor apaixonado por criar aplicações robustas e escaláveis, transformando ideias em código funcional e elegante.',
             avatar: 'F',
             gradient: 'from-blue-400 to-purple-500',
-            image: './img/farias.jpg' // Foto do Fellipe
+            image: './img/farias.jpg',
+            social: {
+                linkedin: 'https://www.linkedin.com/in/farias07br/',
+                github: 'https://github.com/farias000',
+                instagram: 'https://www.instagram.com/farias07br_/'
+            }
         },
         {
             name: 'Miguel Groutto',
@@ -663,7 +673,12 @@ function initTeamCarousel() {
             bio: 'Especialista em desenvolvimento frontend, criando interfaces responsivas e interativas com as mais modernas tecnologias web.',
             avatar: 'M',
             gradient: 'from-purple-500 to-blue-400',
-            image: './img/miguelgroutto.JPEG' // Foto do Miguel (corrigindo extensão)
+            image: './img/miguelgroutto.JPEG',
+            social: {
+                linkedin: 'https://www.linkedin.com/in/miguelgrouttorocha/',
+                github: 'https://github.com/miguelgroutto1',
+                instagram: 'https://instagram.com/miguelgroutto_'
+            }
         }
     ];
     
@@ -677,6 +692,9 @@ function initTeamCarousel() {
     const personName = document.getElementById('person-name');
     const personRole = document.getElementById('person-role');
     const personBio = document.getElementById('person-bio');
+    const linkedinLink = document.querySelector('.linkedin-link');
+    const githubLink = document.querySelector('.github-link');
+    const instagramLink = document.querySelector('.instagram-link');
     const prevBtn = document.getElementById('prev-btn');
     const nextBtn = document.getElementById('next-btn');
     const indicators = document.querySelectorAll('.indicator');
@@ -715,6 +733,15 @@ function initTeamCarousel() {
         personAvatar.className = `w-36 h-36 mx-auto mb-8 rounded-full bg-gradient-to-br ${person.gradient} flex items-center justify-center text-white text-5xl font-bold overflow-hidden`;
     }
     
+    // Função para atualizar links sociais
+    function updateSocialLinks(person) {
+        if (person.social) {
+            if (linkedinLink) linkedinLink.href = person.social.linkedin;
+            if (githubLink) githubLink.href = person.social.github;
+            if (instagramLink) instagramLink.href = person.social.instagram;
+        }
+    }
+    
     // Função para atualizar o card com animação
     function updateCard(index, direction = 'right') {
         if (isTransitioning) return;
@@ -740,6 +767,9 @@ function initTeamCarousel() {
             personName.textContent = person.name;
             personRole.textContent = person.role;
             personBio.textContent = person.bio;
+            
+            // Atualizar links sociais
+            updateSocialLinks(person);
             
             // Atualizar cor do cargo baseado na pessoa
             if (person.name === 'Fellipe Farias') {
@@ -836,6 +866,9 @@ function initTeamCarousel() {
     
     // Inicializar com primeira pessoa
     updateIndicators(0);
+    
+    // Inicializar links sociais da primeira pessoa
+    updateSocialLinks(people[0]);
 }
 
 // Função para otimizações de touch (placeholder)
