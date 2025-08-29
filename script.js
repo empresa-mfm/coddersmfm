@@ -644,7 +644,7 @@ function initTeamCarousel() {
         {
             name: 'Marco Capano',
             role: 'Desenvolvedor Full-Stack',
-            bio: 'Desenvolvedor apaixonado por criar aplicações robustas e escaláveis, transformando ideias em código funcional e elegante.',
+            bio: 'Desenvolvedor entusiasta em construir soluções inovadoras e eficientes, transformando conceitos em código limpo e de alto desempenho.',
             avatar: 'M',
             gradient: 'from-purple-400 to-blue-500',
             image: './img/marco.jpeg',
